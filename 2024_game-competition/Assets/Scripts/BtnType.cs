@@ -22,37 +22,30 @@ public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
         switch (currentType)
         {
             case ButtonType.New:
-                Debug.Log("새게임");
                 break;
             case ButtonType.Continue:
-                Debug.Log("이어하기");
                 break;
             case ButtonType.Option:
                 CanvasGroupOn(optionGroup);
                 CanvasGroupOff(mainGroup);
-                Debug.Log("옵션");
                 break;
             case ButtonType.Sound:
                 if(isSound)
                 {
                     isSound = !isSound;
-                    Debug.Log("사운드OFF");
                 }
                 else
                 {
                     isSound = !isSound;
-                    Debug.Log("사운드ON");
                 }
                 isSound = !isSound;
                 break;
             case ButtonType.Back:
                 CanvasGroupOn(mainGroup);
                 CanvasGroupOff(optionGroup);
-                Debug.Log("뒤로가기");
                 break;
             case ButtonType.Quit:
                 Application.Quit();
-                Debug.Log("앱 종료"); 
                 break;
         }
     }

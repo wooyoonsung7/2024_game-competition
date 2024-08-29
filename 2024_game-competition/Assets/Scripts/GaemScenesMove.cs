@@ -8,6 +8,5 @@ public class GaemScenesMove : MonoBehaviour
     public void GameSceneCtrl()
     {
         SceneManager.LoadScene("GameScene");
-        Debug.Log("Game Scene");
     }
 }
